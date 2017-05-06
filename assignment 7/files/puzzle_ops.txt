@@ -1,0 +1,14 @@
+(operator 
+move-left(
+params(
+(<t1> Object) (<tx> Object)(<l1> Object)(<l2> Object)
+)
+(preconds
+(on <t1> <l1>) (on <tx> <l2>)(decBy1 <l2> <l1>)
+)
+(effects
+(on <tx> <l1>) (on <t1> <l2>) (del on <t1> <l1>) (del on <tx> <l2>)(del decBy1 <l2> <l1>) (incBy1 <l1> <l2>)
+)
+)
+
+)

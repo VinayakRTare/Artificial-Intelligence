@@ -1,0 +1,59 @@
+(operator
+moveAdultRight
+(params
+(<b> Adult) (<q> Boat))
+(preconds
+(left <b>) (left <q>))
+(effects
+(right <b>) (right <q>)(del left <b>) (del left <q>))
+)
+
+(operator
+moveAdultLeft
+(params
+(<b> Adult) (<q> Boat))
+(preconds
+(right  <b>) (right  <q>))
+(effects
+(left  <b>)(left  <q>)(del right  <b>) (del right  <q>))
+)
+
+(operator
+moveChildRight
+(params
+(<b> Child) (<q> Boat))
+(preconds
+(left  <b>) (left  <q>))
+(effects
+(right  <b>) (right  <q>)(del left  <b>) (del left  <q>)))
+)
+
+(operator
+moveChildLeft
+(params
+(<b> Child) (<q> Boat))
+(preconds
+(right  <b>) (right  <q>))
+(effects
+(left  <b>)(left  <q>)(del right  <b>) (del right  <q>))
+)
+
+(operator
+move2ChildRight
+(params
+(<b> Child)(<c> Child)(<q> Boat))
+(preconds
+(left  <b>)(left  <c>)(left  <q>))
+(effects
+(right  <b>)(right  <c>)(right  <q>)(del left  <b>)(del left  <c>)(del left  <q>))
+)
+
+(operator
+move2ChildLeft
+(params
+(<b> Child)(<c> Child)(<q> Boat))
+(preconds
+(right  <b>)(right  <c>)(right  <q>))
+(effects
+(left  <b>)(left  <c>)(left  <q>)(del right  <b>)(del right  <c>)(del right  <q>))
+)

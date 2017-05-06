@@ -1,0 +1,9 @@
+(operator
+moveleft
+(params
+(<a> Tile)(<b> Empty)(<c> Position)(<d> Position))
+(preconds
+(on <a> <c>)(on <b> <d>)(left <b> <a>))
+(effects
+(on <a> <d>)(on <b> <c>)(right <b> <a>)(del on <a> <c>)(del on <b> <d>)(del left <b> <a>))
+)

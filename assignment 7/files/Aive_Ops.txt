@@ -1,0 +1,39 @@
+(operator
+moveleft
+(params
+(<a> Tile)(<x> Location)(<Fy> Location)(<Ty> Location))
+(preconds
+(tileAt <a> <x> <Fy>)(empty <x> <Ty>)(incBy1 <Fy> <Ty>))
+(effects
+(tileAt <a> <x> <Ty>)(empty <x> <Fy>)(del tileAt <a> <x> <Fy>)(del empty <x> <Ty>))
+)
+
+(operator
+moveright
+(params
+(<a> Tile)(<x> Location)(<Fy> Location)(<Ty> Location))
+(preconds
+(tileAt <a> <x> <Fy>)(empty <x> <Ty>)(decBy1 <Fy> <Ty>))
+(effects
+(tileAt <a> <x> <Ty>)(empty <x> <Fy>)(del tileAt <a> <x> <Fy>)(del empty <x> <Ty>))
+)
+
+(operator
+moveup
+(params
+(<a> Tile)(<y> Location)(<Fx> Location)(<Tx> Location))
+(preconds
+(tileAt <a> <Fx> <y>)(empty <Tx> <y>)(decBy1 <Fx> <Tx>))
+(effects
+(tileAt <a> <Tx> <y>)(empty <Fx> <y>)(del tileAt <a> <Fx> <y>)(del empty <Tx> <y>))
+)
+
+(operator
+movedown
+(params
+(<a> Tile)(<y> Location)(<Fx> Location)(<Tx> Location))
+(preconds
+(tileAt <a> <Fx> <y>)(empty <Tx> <y>)(incBy1 <Fx> <Tx>))
+(effects
+(tileAt <a> <Tx> <y>)(empty <Fx> <y>)(del tileAt <a> <Fx> <y>)(del empty <Tx> <y>))
+)

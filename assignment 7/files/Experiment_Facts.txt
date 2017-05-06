@@ -1,0 +1,14 @@
+(t1 Tile)
+(t2 Tile)
+(empty1 Empty)
+(p1 Position)
+(p2 Position)
+(p3 Position)
+
+(preconds(
+(on t1 p1)(on t2 p2)(on empty1 p3)(left t1 t2)(left t2 empty1)
+))
+
+(effects(
+(on t1 p2)(on t2 p3)(on empty p1)(del left t1 t2)(del left t2 empty1)
+))

@@ -1,0 +1,24 @@
+(t1 Tile)
+(t2 Tile)
+(l1 Location)
+(l2 Location)
+(l3 Location)
+
+(preconds
+(tile t1) (tile t2)
+(validLocation l1) (validLocation l2) (validLocation l3)
+
+(tileAt t1 l1)
+(tileAt t2 l2)
+
+
+(empty l3)
+
+(incBy1 l1 l2) (incBy1 l2 l3)
+(decBy1 l3 l2 ) (decBy1 l2 l1)
+)
+
+(effects
+(tileAt t1 l2)
+(tileAt t2 l3)
+)

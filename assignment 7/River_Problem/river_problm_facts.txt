@@ -1,0 +1,14 @@
+(A1 Adult)
+(A2 Adult)
+(C1 Child)
+(C2 Child)
+(B1 Boat)
+
+
+(preconds
+(left A1)(left A2)(left C1)(left C2)(left B1)
+)
+
+(effects
+(right A1)(right A2)(right C1)(right C2)(right B1)
+)

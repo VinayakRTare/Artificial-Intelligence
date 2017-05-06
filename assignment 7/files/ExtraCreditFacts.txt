@@ -1,0 +1,16 @@
+(A ttt1)
+(B ttt1)
+(C ttt1)
+
+(preconds
+(ppp1 A C)
+(ppp2 C)
+(ppp3 C)
+(ppp3 A)
+)
+
+(effects
+(eee1 B C)
+(eee2 B)
+
+)
